@@ -3,6 +3,7 @@ import color from "colors";
 import express from "express";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
+import authRouter from "./routes/authRoute.js";
 
 connectDB();
 const app = express();
@@ -16,6 +17,7 @@ app.use(morgan("dev"));
 app.use(express.static("public"));
 
 //routes
+app.use("/api/v1/auth", authRouter);
 app.get("/", (req, res) => {
   res.render("index");
 });
