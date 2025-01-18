@@ -1,15 +1,20 @@
 import "dotenv/config";
+import color from "colors";
 import express from "express";
 import morgan from "morgan";
+import connectDB from "./config/db.js";
 
+connectDB();
 const app = express();
 // set the view engine to ejs
 app.set("view engine", "ejs");
 // app.set("views", path.join(__dirname, "views"));// this is the default anyway
 
 //middleware
+app.use(express.json());
 app.use(morgan("dev"));
 app.use(express.static("public"));
+
 //routes
 app.get("/", (req, res) => {
   res.render("index");
