@@ -1,4 +1,5 @@
 import "dotenv/config";
+import cors from "cors";
 import color from "colors";
 import express from "express";
 import morgan from "morgan";
@@ -13,6 +14,7 @@ app.set("view engine", "ejs");
 
 //middleware
 app.use(express.json());
+app.use(cors());
 app.use(morgan("dev"));
 app.use(express.static("public"));
 

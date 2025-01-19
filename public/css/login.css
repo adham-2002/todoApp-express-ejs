@@ -13,16 +13,19 @@ body {
   align-items: center;
   min-height: 100vh;
   background: #223243;
+  margin: 0; /* Avoid body margin */
 }
 
 .container {
-  padding: 40px;
+  padding: 60px;
   border-radius: 20px;
   border: 8px solid #223243;
   box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.35),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+  max-width: 100%;
+  width: 500px; /* Increased width */
 }
 
 .container .form {
@@ -30,7 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px; /* Increased space between input fields vertically */
 }
 
 .container .form.signin,
@@ -46,15 +49,18 @@ body {
   color: #fff;
   font-weight: 500;
   letter-spacing: 0.1em;
+  margin-bottom: 30px; /* Space out heading from form elements */
 }
 
 .container .form .inputBox {
   position: relative;
-  width: 300px;
+  width: 100%; /* Make input fields responsive */
+  max-width: 400px; /* Increased max width */
+  margin-bottom: 20px;
 }
 
 .container .form .inputBox input {
-  padding: 12px 10px 12px 48px;
+  padding: 14px 12px 14px 48px; /* Increased padding for larger input */
   border: none;
   width: 100%;
   background: #223243;
@@ -62,7 +68,7 @@ body {
   color: #fff;
   font-weight: 300;
   border-radius: 25px;
-  font-size: 1em;
+  font-size: 1.1em; /* Increased font size for better readability */
   box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.35);
   transition: 0.5s;
@@ -72,9 +78,9 @@ body {
 .container .form .inputBox span {
   position: absolute;
   left: 0;
-  padding: 12px 10px 12px 48px;
+  padding: 14px 12px 14px 48px; /* Increased padding for consistency */
   pointer-events: none;
-  font-size: 1em;
+  font-size: 1.1em; /* Increased font size */
   font-weight: 300;
   transition: 0.5s;
   letter-spacing: 0.05em;
@@ -87,7 +93,7 @@ body {
   border: 1px solid #00dfc4;
   background: #223243;
   transform: translateX(25px) translateY(-7px);
-  font-size: 0.6em;
+  font-size: 0.7em; /* Slightly smaller on focus */
   padding: 0 8px;
   border-radius: 10px;
   letter-spacing: 0.1em;
@@ -112,13 +118,19 @@ body {
 .container .form .inputBox input[type="submit"] {
   background: #00dfc4;
   color: #223243;
-  padding: 10px 0;
+  padding: 12px 0; /* Increased padding */
   font-weight: 500;
   cursor: pointer;
+  border-radius: 25px; /* Add border radius for consistency */
   box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.35),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+  transition: 0.3s;
+}
+
+.container .form .inputBox input[type="submit"]:hover {
+  background: #00c29f; /* Change color on hover */
 }
 
 .container .form p {
@@ -130,4 +142,14 @@ body {
 .container .form p a {
   font-weight: 500;
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%; /* Adjust width on small screens */
+  }
+
+  .container .form .inputBox {
+    width: 100%; /* Adjust input field width */
+  }
 }
