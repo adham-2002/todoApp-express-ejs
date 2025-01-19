@@ -37,11 +37,19 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Sign up successful!");
       } else {
         // Handle errors from API response
-        console.error(result.errors || result.message);
-        alert(result.errors || result.message);
+        if (result.errors && result.errors.length > 0) {
+          // Iterate through each error and display it
+          result.errors.forEach((error) => {
+            console.error(`Error: ${error.msg} (Field: ${error.path})`);
+            alert(`${error.msg} (Field: ${error.path})`);
+          });
+        } else {
+          console.error(result.errors || result.message);
+          alert(result.errors || result.message);
+        }
       }
     } catch (error) {
-      console.error("Error during signup:", error);
+      console.error("Error during signup:", error.message);
       alert("An error occurred. Please try again.");
     }
   });
@@ -71,11 +79,19 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Login successful!");
       } else {
         // Handle errors from API response
-        console.error(result.errors || result.message);
-        alert(result.errors || result.message);
+        if (result.errors && result.errors.length > 0) {
+          // Iterate through each error and display it
+          result.errors.forEach((error) => {
+            console.error(`Error: ${error.msg} (Field: ${error.path})`);
+            alert(`${error.msg} (Field: ${error.path})`);
+          });
+        } else {
+          console.error(result.errors || result.message);
+          alert(result.errors || result.message);
+        }
       }
     } catch (error) {
-      console.error("Error during login:", error);
+      console.error("Error during login:", error.message);
       alert("An error occurred. Please try again.");
     }
   });
