@@ -1,7 +1,5 @@
 import slugify from "slugify";
 import { check } from "express-validator";
-import User from "../models/userModel.js";
-import bcrypt from "bcryptjs";
 import validatorMiddleware from "../middlewares/validatorMiddleware.js";
 export const signupValidator = [
   check("username")
@@ -16,7 +14,14 @@ export const signupValidator = [
     })
     .withMessage("Username must be at most 20 characters long")
     .matches(/[a-zA-Z]/)
-    .withMessage("The field must contain at least one letter."),
+    .withMessage("The field must contain at least one letter.")
+    .custom(async (username, { req }) => {
+      const slug = slugify(username, {
+        lower: true,
+        strict: true,
+      });
+      req.body.slug = slug;
+    }),
 
   check("email")
     .notEmpty()

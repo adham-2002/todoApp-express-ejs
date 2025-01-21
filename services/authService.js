@@ -10,7 +10,7 @@ import createToken from "../utils/createToken.js";
 // @access Public
 
 export const signup = asyncHandler(async (req, res, next) => {
-  const { username, email, password, confirmPassword } = req.body;
+  const { username, email, password, confirmPassword, slug } = req.body;
   // 1- check if user already exists
   const userExists = await User.findOne({ email });
   if (userExists) {
@@ -22,6 +22,7 @@ export const signup = asyncHandler(async (req, res, next) => {
     email,
     password,
     confirmPassword,
+    slug,
   });
 
   // 2- Generate Token
