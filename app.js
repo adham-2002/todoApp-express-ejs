@@ -6,6 +6,7 @@ import globalError from "./middlewares/errorMiddleware.js";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
 import authRouter from "./routes/authRoute.js";
+import taskRouter from "./routes/taskRoute.js";
 
 connectDB();
 const app = express();
@@ -23,6 +24,7 @@ app.use(express.static("public"));
 
 //routes
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/tasks", taskRouter);
 app.get("/", (req, res) => {
   res.render("index");
 });

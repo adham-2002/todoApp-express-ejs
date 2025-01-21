@@ -1,6 +1,6 @@
 import slugify from "slugify";
 import { check } from "express-validator";
-import validatorMiddleware from "../middlewares/validatorMiddleware.js";
+import validatorMiddleware from "../../middlewares/validatorMiddleware.js";
 export const signupValidator = [
   check("username")
     .notEmpty()

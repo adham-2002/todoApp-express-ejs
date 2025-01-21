@@ -53,3 +53,29 @@ export const signin = asyncHandler(async (req, res) => {
     token,
   });
 });
+export const protect = asyncHandler(async (req, res, next) => {
+  // 1) check if token is exists if exists hold it in a variable
+  let token;
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith("Bearer")
+  ) {
+    token = req.headers.authorization.split(" ")[1];
+  }
+  if (!token) {
+    return next(new apiError("Not authorized to access this route", 401));
+  }
+  // 2) verify token ( no changes happen or expired)
+  const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+  // 3) check if user exists
+  const currentUser = await User.findById(decoded.id);
+  if (!currentUser) {
+    return next(new apiError("User no longer exists", 401));
+  }
+  //4) check if user is active
+  if (!currentUser.active) {
+    return next(new apiError("User is not active", 401));
+  }
+  req.user = currentUser;
+  next();
+});

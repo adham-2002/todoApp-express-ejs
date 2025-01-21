@@ -1,7 +1,9 @@
 import express from "express";
-import { signup, signin } from "../services/authService.js";
-import { signupValidator, signinValidator } from "../utils/authValidator.js";
-
+import { signup, signin, protect } from "../services/authService.js";
+import {
+  signupValidator,
+  signinValidator,
+} from "../utils/validators/authValidator.js";
 const router = express.Router();
 
 router.post("/signup", signupValidator, signup);
