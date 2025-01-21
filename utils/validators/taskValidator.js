@@ -22,3 +22,20 @@ export const createTaskValidator = [
 
   validatorMiddleware,
 ];
+
+export const updateTaskValidator = [
+  check("id")
+    .notEmpty()
+    .withMessage("Task ID is required")
+    .isMongoId()
+    .withMessage("Invalid Task ID"),
+  validatorMiddleware,
+];
+export const deleteTaskValidator = [
+  check("id")
+    .notEmpty()
+    .withMessage("Task ID is required")
+    .isMongoId()
+    .withMessage("Invalid Task ID"),
+  validatorMiddleware,
+];

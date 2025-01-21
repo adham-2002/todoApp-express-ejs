@@ -1,5 +1,5 @@
 import express from "express";
-import { signup, signin, protect } from "../services/authService.js";
+import { signup, signin } from "../services/authService.js";
 import {
   signupValidator,
   signinValidator,

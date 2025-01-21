@@ -29,8 +29,10 @@ const taskSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
-// Schema.pre("save", function (next) {
-//   this.completedAt = this.completed ? Date.now() : null;
-//   next();
-// });
+taskSchema.pre("save", function (next) {
+  if (this.isModified("completed")) {
+    this.completedAt = this.completed ? Date.now() : null;
+  }
+  next();
+});
 export default mongoose.model("Task", taskSchema);
