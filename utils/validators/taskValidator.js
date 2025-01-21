@@ -8,9 +8,11 @@ export const createTaskValidator = [
     .withMessage("Due Date is required")
     .isDate()
     .withMessage("Due Date must be a valid date")
-    .custom((value, { req }) => {
+    // check if due date is in the future
+    .custom((value) => {
       const today = new Date();
-      if (value < today) {
+      const dueDate = new Date(value);
+      if (dueDate < today) {
         throw new Error("Due Date cannot be in the past");
       }
       return true;
