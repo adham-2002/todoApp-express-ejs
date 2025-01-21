@@ -8,13 +8,15 @@ import createToken from "../utils/createToken.js";
 //! @desc SignUp
 // @route POST /api/v1/auth/signup
 // @access Public
+
 export const signup = asyncHandler(async (req, res, next) => {
   const { username, email, password, confirmPassword } = req.body;
-  // 1- create User
-  const exists = await User.findOne({ email });
-  if (exists) {
-    return next(new apiError("email already in use", 401));
+  // 1- check if user already exists
+  const userExists = await User.findOne({ email });
+  if (userExists) {
+    return next(new apiError("User already exists", 400));
   }
+
   const user = await User.create({
     username,
     email,
@@ -34,8 +36,15 @@ export const signup = asyncHandler(async (req, res, next) => {
 // @Route POST /api/v1/auth/signin
 // @access Public
 export const signin = asyncHandler(async (req, res) => {
-  const { email, password } = req.body;
-  const user = await User.findOne({ email });
+  //1) check if email exists and password is correct
+  const user = await User.findOne({ email: req.body.email });
+
+  if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
+    return next(new apiError("Invalid email or password", 401));
+  }
+  if (!user.active) {
+    return next(new apiError("User is not active", 401));
+  }
 
   const token = createToken({ id: user._id });
   res.status(200).json({
