@@ -1,4 +1,10 @@
 import asyncHandler from "express-async-handler";
+import sendEmail from "../utils/sendEmail.js";
+import {
+  generateResetCode,
+  hashCode,
+  saveResetCodeToUser,
+} from "../utils/passwordResetUtils.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import apiError from "../utils/apiError.js";
@@ -29,6 +35,8 @@ export const signup = asyncHandler(async (req, res, next) => {
   const token = createToken({ id: user._id });
 
   res.status(201).json({
+    status: "success",
+    message: "User created successfully",
     data: user,
     token,
   });
@@ -49,10 +57,13 @@ export const signin = asyncHandler(async (req, res) => {
 
   const token = createToken({ id: user._id });
   res.status(200).json({
+    status: "success",
+    message: "Login successful",
     data: user,
     token,
   });
 });
+//! @desc Protect Routes
 export const protect = asyncHandler(async (req, res, next) => {
   // 1) check if token is exists if exists hold it in a variable
   let token;
@@ -79,7 +90,7 @@ export const protect = asyncHandler(async (req, res, next) => {
   req.user = currentUser;
   next();
 });
-
+//! @desc Restrict to specific roles
 export const allowedTo = (...roles) => {
   return (req, res, next) => {
     // 1) check if user role is allowed to access this route
@@ -94,3 +105,97 @@ export const allowedTo = (...roles) => {
     next();
   };
 };
+//! @desc Forget Password
+// @Route POST /api/v1/auth/forget-password
+// @access Public
+export const forgetPassword = asyncHandler(async (req, res, next) => {
+  // get user by email
+  const user = await User.findOne({ email: req.body.email });
+  if (!user) {
+    return next(
+      new apiError(`There is no user with this email ${req.body.email}`, 404)
+    );
+  }
+
+  // generate reset code
+  const resetCode = generateResetCode();
+  console.log(resetCode);
+
+  // hash reset code
+  const hashedCode = hashCode(resetCode);
+
+  // save reset code to user
+  await saveResetCodeToUser(user, hashedCode);
+
+  // send email with reset code
+  try {
+    await sendEmail({
+      email: user.email,
+      subject: "Reset Password",
+      message: `hi ${user.username}, your reset code is ${resetCode}`,
+    });
+    res.status(200).json({
+      status: "success",
+      message: "Email sent successfully",
+    });
+  } catch (err) {
+    // handle if there is an error while sending email
+    user.passwordResetCode = undefined;
+    user.passwordResetExpires = undefined;
+    user.passwordResetVerified = undefined;
+    await user.save();
+    return next(new apiError("Error sending email", 500));
+  }
+});
+//! @desc Verify Password Reset Code
+// @Route POST /api/v1/auth/verifyResetCode
+// @access Public
+export const verifyPasswordResetCode = asyncHandler(async (req, res, next) => {
+  // get user based on reset code
+  const hashedCode = hashCode(req.body.resetCode);
+  const user = await User.findOne({
+    passwordResetCode: hashedCode,
+    passwordResetExpires: { $gt: Date.now() },
+    passwordResetVerified: false,
+  });
+  if (!user) {
+    return next(new apiError("Invalid reset code", 404));
+  }
+  user.passwordResetVerified = true;
+  await user.save();
+
+  res.status(200).json({
+    status: "success",
+    message: "Reset code verified successfully",
+  });
+});
+export const resetPassword = asyncHandler(async (req, res, next) => {
+  const user = await User.findOne({
+    email: req.body.email,
+  });
+  // check if user exists
+  if (!user) {
+    return next(new apiError("User not found", 404));
+  }
+
+  // check if reset code is verified
+  if (!user.passwordResetVerified) {
+    return next(new apiError("Reset code not verified", 404));
+  }
+
+  // check if reset code is expired
+  if (user.passwordResetExpires < Date.now()) {
+    return next(new apiError("Reset code expired", 404));
+  }
+  user.password = req.body.password;
+  user.passwordResetCode = undefined;
+  user.passwordResetExpires = undefined;
+  user.passwordResetVerified = undefined;
+  await user.save();
+  const token = createToken({ id: user._id });
+  res.status(200).json({
+    status: "success",
+    message: "Password reset successfully",
+    token,
+  });
+});

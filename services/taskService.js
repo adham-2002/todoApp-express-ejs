@@ -3,7 +3,11 @@ import Task from "../models/taskModel.js";
 import apiError from "../utils/apiError.js";
 export const getTasks = asyncHandler(async (req, res, next) => {
   const tasks = await Task.find({ user: req.user._id });
-  res.status(200).json({ status: "success", data: tasks });
+  res.status(200).json({
+    status: "success",
+    message: "Tasks fetched successfully",
+    data: tasks,
+  });
 });
 
 export const createTask = asyncHandler(async (req, res, next) => {
@@ -14,7 +18,11 @@ export const createTask = asyncHandler(async (req, res, next) => {
     dueDate,
     user: req.user._id,
   });
-  res.status(201).json({ status: "success", data: task });
+  res.status(201).json({
+    status: "success",
+    message: "Task created successfully",
+    data: task,
+  });
 });
 export const updateTask = asyncHandler(async (req, res, next) => {
   const { id } = req.params;
@@ -28,7 +36,11 @@ export const updateTask = asyncHandler(async (req, res, next) => {
   if (completed !== undefined) task.completed = completed;
   await task.save();
 
-  res.status(200).json({ status: "success", data: task });
+  res.status(200).json({
+    status: "success",
+    message: "Task updated successfully",
+    data: task,
+  });
 });
 export const deleteTask = asyncHandler(async (req, res, next) => {
   const { id } = req.params;
@@ -38,8 +50,6 @@ export const deleteTask = asyncHandler(async (req, res, next) => {
   }
   res.status(200).json({
     status: "success",
-    data: {
-      message: "Task deleted successfully",
-    },
+    message: "Task deleted successfully",
   });
 });
