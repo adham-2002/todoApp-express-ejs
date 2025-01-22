@@ -79,3 +79,18 @@ export const protect = asyncHandler(async (req, res, next) => {
   req.user = currentUser;
   next();
 });
+
+export const allowedTo = (...roles) => {
+  return (req, res, next) => {
+    // 1) check if user role is allowed to access this route
+    if (!roles.includes(req.user.role)) {
+      return next(
+        new apiError(
+          `User role ${req.user.role} is not allowed to access this route`,
+          403
+        )
+      );
+    }
+    next();
+  };
+};
