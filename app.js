@@ -1,6 +1,8 @@
 import "dotenv/config";
 import cors from "cors";
 import color from "colors";
+
+import cookieParser from "cookie-parser";
 import express from "express";
 import globalError from "./middlewares/errorMiddleware.js";
 import morgan from "morgan";
@@ -21,6 +23,7 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 app.use(express.static("public"));
+app.use(cookieParser());
 
 //routes
 app.use("/api/v1/auth", authRouter);

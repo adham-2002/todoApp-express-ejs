@@ -1,5 +1,6 @@
 import asyncHandler from "express-async-handler";
 import sendEmail from "../utils/sendEmail.js";
+import refreshTokenModel from "../models/refreshTokenModel.js";
 import {
   generateResetCode,
   hashCode,
@@ -9,7 +10,10 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import apiError from "../utils/apiError.js";
 import User from "../models/userModel.js";
-import createToken from "../utils/createToken.js";
+import {
+  generateAccessToken,
+  generateRefreshToken,
+} from "../utils/jwtUtils.js";
 
 //! @desc SignUp
 // @route POST /api/v1/auth/signup
@@ -28,17 +32,15 @@ export const signup = asyncHandler(async (req, res, next) => {
     email,
     password,
     confirmPassword,
-    slug,
   });
-
-  // 2- Generate Token
-  const token = createToken({ id: user._id });
-
   res.status(201).json({
     status: "success",
     message: "User created successfully",
-    data: user,
-    token,
+    data: {
+      username: user.username,
+      email: user.email,
+      slug: user.slug,
+    },
   });
 });
 //! @desc SignIn
@@ -55,14 +57,105 @@ export const signin = asyncHandler(async (req, res) => {
     return next(new apiError("User is not active", 401));
   }
 
-  const token = createToken({ id: user._id });
+  const accessToken = generateAccessToken({ id: user._id });
+  const refreshToken = generateRefreshToken({ id: user._id });
+  console.log(process.env.JWT_REFRESH_EXPIRES);
+  await refreshTokenModel.create({
+    userId: user._id,
+    token: refreshToken,
+    expiresAt: new Date(
+      Date.now() + parseInt(process.env.JWT_REFRESH_EXPIRES_IN)
+    ),
+  });
+  //send refresh token as an HTTP-only cookie
+  res.cookie("refreshToken", refreshToken, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "none",
+    maxAge: parseInt(process.env.JWT_REFRESH_EXPIRES_IN), // 7 days
+  });
   res.status(200).json({
     status: "success",
     message: "Login successful",
     data: user,
-    token,
+    accessToken,
   });
 });
+//! @desc Logout
+export const logout = asyncHandler(async (req, res, next) => {
+  const { refreshToken: token } = req.cookies;
+
+  if (!token) {
+    return next(new apiError("Refresh token not provided", 400));
+  }
+
+  // Delete the refresh token from the database
+  await refreshTokenModel.findOneAndDelete({ token });
+
+  // Clear the refresh token cookie
+  res.clearCookie("refreshToken");
+
+  res.status(200).json({
+    status: "success",
+    message: "Logged out successfully",
+  });
+});
+//! @desc Refresh Token
+export const refreshToken = asyncHandler(async (req, res, next) => {
+  const { refreshToken } = req.cookies;
+  console.log(refreshToken);
+
+  if (!refreshToken) {
+    return next(new apiError("Not authorized to access this route", 401));
+  }
+
+  // Find the refresh token in the database
+  const existingToken = await refreshTokenModel.findOne({
+    token: refreshToken,
+  });
+  if (!existingToken) {
+    return next(new apiError("Invalid refresh token", 401));
+  }
+
+  // Verify the token
+  jwt.verify(
+    refreshToken,
+    process.env.JWT_REFRESH_SECRET_KEY,
+    async (err, decoded) => {
+      if (err) {
+        return next(new apiError("Not authorized to access this route", 401));
+      }
+
+      const userId = decoded.id;
+
+      // Generate new tokens
+      const newAccessToken = generateAccessToken({ id: userId });
+      const newRefreshToken = generateRefreshToken({ id: userId });
+
+      // Update the refresh token in the database
+      const expiresAt = new Date(
+        Date.now() + parseInt(process.env.JWT_REFRESH_EXPIRES_IN)
+      ); // 7 days
+      existingToken.token = newRefreshToken;
+      existingToken.expiresAt = expiresAt;
+      await existingToken.save();
+
+      // Send the new refresh token as a cookie
+      res.cookie("refreshToken", newRefreshToken, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "none",
+        maxAge: parseInt(process.env.JWT_REFRESH_EXPIRES_IN),
+      });
+
+      res.status(200).json({
+        status: "success",
+        accessToken: newAccessToken,
+      });
+    }
+  );
+});
+
 //! @desc Protect Routes
 export const protect = asyncHandler(async (req, res, next) => {
   // 1) check if token is exists if exists hold it in a variable
@@ -169,6 +262,9 @@ export const verifyPasswordResetCode = asyncHandler(async (req, res, next) => {
     message: "Reset code verified successfully",
   });
 });
+//! @desc Reset Password
+// @Route POST /api/v1/auth/reset-password
+// @access Public
 export const resetPassword = asyncHandler(async (req, res, next) => {
   const user = await User.findOne({
     email: req.body.email,
@@ -192,7 +288,7 @@ export const resetPassword = asyncHandler(async (req, res, next) => {
   user.passwordResetExpires = undefined;
   user.passwordResetVerified = undefined;
   await user.save();
-  const token = createToken({ id: user._id });
+  const token = generateAccessToken({ id: user._id });
   res.status(200).json({
     status: "success",
     message: "Password reset successfully",

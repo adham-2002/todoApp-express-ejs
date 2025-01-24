@@ -5,6 +5,8 @@ import {
   forgetPassword,
   verifyPasswordResetCode,
   resetPassword,
+  refreshToken,
+  logout,
 } from "../services/authService.js";
 import {
   signupValidator,
@@ -20,5 +22,7 @@ router
   .post("/signin", signinValidator, signin)
   .post("/forgetPassword", forgetPasswordValidator, forgetPassword)
   .post("/verifyPassword", verifyPasswordValidator, verifyPasswordResetCode)
-  .put("/resetPassword", resetPasswordValidator, resetPassword);
+  .post("/refresh-token", refreshToken)
+  .post("/logout", logout)
+  .put("/reset-password", resetPasswordValidator, resetPassword);
 export default router;
