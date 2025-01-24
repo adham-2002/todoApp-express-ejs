@@ -44,36 +44,46 @@ export const signup = asyncHandler(async (req, res, next) => {
   });
 });
 //! @desc SignIn
-// @Route POST /api/v1/auth/signin
-// @access Public
-export const signin = asyncHandler(async (req, res) => {
-  //1) check if email exists and password is correct
+// @ Route POST /api/v1/auth/signin
+// @ access Public
+export const signin = asyncHandler(async (req, res, next) => {
+  // 1) Check if email exists and password is correct
   const user = await User.findOne({ email: req.body.email });
 
   if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
     return next(new apiError("Invalid email or password", 401));
   }
+
   if (!user.active) {
     return next(new apiError("User is not active", 401));
   }
 
+  // 2) Generate access token and refresh token
   const accessToken = generateAccessToken({ id: user._id });
   const refreshToken = generateRefreshToken({ id: user._id });
-  console.log(process.env.JWT_REFRESH_EXPIRES);
+
+  // 3) Delete the old refresh token if it exists
+  await refreshTokenModel.deleteOne({ userId: user._id });
+
+  // 4) Save the new refresh token with an expiration time
+  const expiresAt = new Date(
+    Date.now() + parseInt(process.env.JWT_REFRESH_EXPIRES_IN)
+  );
   await refreshTokenModel.create({
     userId: user._id,
     token: refreshToken,
-    expiresAt: new Date(
-      Date.now() + parseInt(process.env.JWT_REFRESH_EXPIRES_IN)
-    ),
+    expiresAt,
   });
-  //send refresh token as an HTTP-only cookie
+
+  // 5) Send the refresh token as an HTTP-only cookie
   res.cookie("refreshToken", refreshToken, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "none",
-    maxAge: parseInt(process.env.JWT_REFRESH_EXPIRES_IN), // 7 days
+    maxAge: parseInt(process.env.JWT_REFRESH_EXPIRES_IN), // Expires in the duration you set
   });
+
+  // 6) Send the response with the access token and user data
   res.status(200).json({
     status: "success",
     message: "Login successful",
@@ -81,7 +91,10 @@ export const signin = asyncHandler(async (req, res) => {
     accessToken,
   });
 });
+
 //! @desc Logout
+// @ Route POST /api/v1/auth/logout
+// @
 export const logout = asyncHandler(async (req, res, next) => {
   const { refreshToken: token } = req.cookies;
 
@@ -101,10 +114,9 @@ export const logout = asyncHandler(async (req, res, next) => {
   });
 });
 //! @desc Refresh Token
+//!
 export const refreshToken = asyncHandler(async (req, res, next) => {
   const { refreshToken } = req.cookies;
-  console.log(refreshToken);
-
   if (!refreshToken) {
     return next(new apiError("Not authorized to access this route", 401));
   }
@@ -131,7 +143,7 @@ export const refreshToken = asyncHandler(async (req, res, next) => {
       // Generate new tokens
       const newAccessToken = generateAccessToken({ id: userId });
       const newRefreshToken = generateRefreshToken({ id: userId });
-
+      console.log(newRefreshToken);
       // Update the refresh token in the database
       const expiresAt = new Date(
         Date.now() + parseInt(process.env.JWT_REFRESH_EXPIRES_IN)
