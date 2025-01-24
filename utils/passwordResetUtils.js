@@ -11,7 +11,7 @@ const saveResetCodeToUser = async (user, hashedCode) => {
   user.passwordResetCode = hashedCode;
   user.passwordResetExpires = Date.now() + 10 * 60 * 1000;
   user.passwordResetVerified = false;
-  console.log(user);
+  // console.log(user);
   await user.save();
 };
 // export

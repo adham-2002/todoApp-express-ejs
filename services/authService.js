@@ -224,7 +224,7 @@ export const forgetPassword = asyncHandler(async (req, res, next) => {
 
   // generate reset code
   const resetCode = generateResetCode();
-  console.log(resetCode);
+  // console.log(resetCode);
 
   // hash reset code
   const hashedCode = hashCode(resetCode);
