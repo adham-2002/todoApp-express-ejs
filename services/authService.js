@@ -193,6 +193,7 @@ export const protect = asyncHandler(async (req, res, next) => {
     return next(new apiError("User is not active", 401));
   }
   req.user = currentUser;
+  console.log(req.user);
   next();
 });
 //! @desc Restrict to specific roles

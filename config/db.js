@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+import "dotenv/config";
+
 const connectDB = async () => {
   try {
     const URI = process.env.DATABASE.replace(

@@ -1,41 +1,64 @@
-import "dotenv/config";
+import "dotenv/config"; // Load environment variables
 import cors from "cors";
-import color from "colors";
-
+import colors from "colors"; // Colorful logs
 import cookieParser from "cookie-parser";
 import express from "express";
-import globalError from "./middlewares/errorMiddleware.js";
 import morgan from "morgan";
-import connectDB from "./config/db.js";
-import authRouter from "./routes/authRoute.js";
-import taskRouter from "./routes/taskRoute.js";
+import connectDB from "./config/db.js"; // Database connection
+import globalError from "./middlewares/errorMiddleware.js"; // Global error handler
+import authRouter from "./routes/authRoute.js"; // Auth routes
+import taskRouter from "./routes/taskRoute.js"; // Task routes
+import categoryRouter from "./routes/categoryRoute.js"; // Category routes
+import seedPredefinedCategories from "./scripts/seedpredefinedCategories.js";
 
+// Connect to the database
 connectDB();
+
+// Initialize the app
 const app = express();
-// set the view engine to ejs
+
+// Set the view engine to EJS
 app.set("view engine", "ejs");
-// app.set("views", path.join(__dirname, "views"));// this is the default anyway
 
-//middleware
-app.use(express.json());
-app.use(cors());
+// Middleware
+app.use(express.json()); // Parse JSON payloads
+app.use(cors()); // Enable CORS
+app.use(cookieParser()); // Parse cookies
+app.use(express.static("public")); // Serve static files
 if (process.env.NODE_ENV === "development") {
-  app.use(morgan("dev"));
+  app.use(morgan("dev")); // HTTP request logger in dev mode
 }
-app.use(express.static("public"));
-app.use(cookieParser());
 
-//routes
-app.use("/api/v1/auth", authRouter);
-app.use("/api/v1/tasks", taskRouter);
+// Seed predefined categories if enabled
+if (process.env.SEED_ON_STARTUP === "true") {
+  seedPredefinedCategories()
+    .then(() => console.log("Predefined categories seeded successfully!".green))
+    .catch((err) =>
+      console.error(`Error seeding categories: ${err.message}`.red)
+    );
+}
+
+// Routes
+app.use("/api/v1/auth", authRouter); // Authentication routes
+app.use("/api/v1/tasks", taskRouter); // Task management routes
+app.use("/api/v1/categories", categoryRouter); // Category management routes
+
+// Views
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index"); // Render index.ejs
 });
 app.get("/main", (req, res) => {
-  res.render("main");
+  res.render("main"); // Render main.ejs
 });
+
+// Global Error Handler
 app.use(globalError);
+
+// Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(
+    `Server is running on http://localhost:${PORT} in ${process.env.NODE_ENV} mode`
+      .cyan
+  );
 });
