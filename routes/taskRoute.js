@@ -4,6 +4,7 @@ import {
   getTasks,
   updateTask,
   deleteTask,
+  createFilterObject,
 } from "../services/taskService.js";
 import { protect } from "../services/authService.js";
 import {
@@ -12,11 +13,11 @@ import {
   deleteTaskValidator,
 } from "../utils/validators/taskValidator.js";
 
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 
 router
   .post("/", createTaskValidator, protect, createTask)
-  .get("/", protect, getTasks)
+  .get("/", protect, createFilterObject, getTasks)
   .put("/:id", updateTaskValidator, protect, updateTask)
   .delete("/:id", deleteTaskValidator, protect, deleteTask);
 

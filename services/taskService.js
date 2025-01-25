@@ -1,8 +1,25 @@
 import asyncHandler from "express-async-handler";
 import Task from "../models/taskModel.js";
 import apiError from "../utils/apiError.js";
+
+//! @Nested Route
+// GET /api/v1/categories/:categoryId/tasks
+export const createFilterObject = (req, res, next) => {
+  let filterObject = {};
+  if (req.params.categoryId) {
+    filterObject = { category: req.params.categoryId };
+  }
+  req.filterObject = filterObject;
+  next();
+};
+
 export const getTasks = asyncHandler(async (req, res, next) => {
-  const tasks = await Task.find({ user: req.user._id }).populate(
+  let filter = {};
+  console.l;
+  if (req.filterObject) {
+    filter = req.filterObject;
+  }
+  const tasks = await Task.find({ ...filter, user: req.user._id }).populate(
     "category",
     "name"
   );
@@ -14,13 +31,14 @@ export const getTasks = asyncHandler(async (req, res, next) => {
 });
 
 export const createTask = asyncHandler(async (req, res, next) => {
-  const { title, dueDate, categoryId } = req.body;
+  const { title, dueDate, categoryId, priority } = req.body;
 
   const task = await Task.create({
     title,
     dueDate,
     user: req.user._id,
     category: categoryId || null,
+    priority,
   });
   res.status(201).json({
     status: "success",
