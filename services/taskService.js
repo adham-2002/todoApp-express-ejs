@@ -1,7 +1,7 @@
 import asyncHandler from "express-async-handler";
 import Task from "../models/taskModel.js";
 import apiError from "../utils/apiError.js";
-
+import ApiFeatures from "../utils/apiFeature.js";
 //! @Nested Route
 // GET /api/v1/categories/:categoryId/tasks
 export const createFilterObject = (req, res, next) => {
@@ -14,18 +14,19 @@ export const createFilterObject = (req, res, next) => {
 };
 
 export const getTasks = asyncHandler(async (req, res, next) => {
-  let filter = {};
-  console.l;
-  if (req.filterObject) {
-    filter = req.filterObject;
-  }
-  const tasks = await Task.find({ ...filter, user: req.user._id }).populate(
-    "category",
-    "name"
-  );
+  console.log(req.query);
+  let filter = req.filterObject || {};
+  filter.user = req.user._id;
+  const apiFeatures = new ApiFeatures(Task.find(filter), req.query)
+    .filter()
+    .sort()
+    .limitFields()
+    .paginate(await Task.countDocuments(filter));
+  const tasks = await apiFeatures.mongooseQuery.populate("category", "name");
   res.status(200).json({
     status: "success",
     message: "Tasks fetched successfully",
+    pagination: apiFeatures.paginationResult,
     data: tasks,
   });
 });

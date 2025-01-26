@@ -143,7 +143,7 @@ export const refreshToken = asyncHandler(async (req, res, next) => {
       // Generate new tokens
       const newAccessToken = generateAccessToken({ id: userId });
       const newRefreshToken = generateRefreshToken({ id: userId });
-      console.log(newRefreshToken);
+      // console.log(newRefreshToken);
       // Update the refresh token in the database
       const expiresAt = new Date(
         Date.now() + parseInt(process.env.JWT_REFRESH_EXPIRES_IN)
@@ -193,7 +193,6 @@ export const protect = asyncHandler(async (req, res, next) => {
     return next(new apiError("User is not active", 401));
   }
   req.user = currentUser;
-  console.log(req.user);
   next();
 });
 //! @desc Restrict to specific roles
