@@ -22,8 +22,8 @@ const router = express.Router();
 
 // Apply rate limiting to specific routes
 router
-  .post("/signup", apiRateLimiter(defaultConfig), signupValidator, signup) // Default rate limit
-  .post("/signin", apiRateLimiter(defaultConfig), signinValidator, signin) // Default rate limit
+  .post("/signup", signupValidator, signup) // Default rate limit
+  .post("/signin", signinValidator, signin) // Default rate limit
   .post(
     "/forgetPassword",
     apiRateLimiter(criticalConfig), //! Critical API rate limit

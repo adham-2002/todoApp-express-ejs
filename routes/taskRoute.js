@@ -12,7 +12,6 @@ import {
   updateTaskValidator,
   deleteTaskValidator,
 } from "../utils/validators/taskValidator.js";
-
 const router = express.Router({ mergeParams: true });
 
 router

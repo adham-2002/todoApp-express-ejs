@@ -4,6 +4,7 @@ import colors from "colors"; // Colorful logs
 import cookieParser from "cookie-parser";
 import express from "express";
 import morgan from "morgan";
+import helmet from "helmet";
 import connectDB from "./config/db.js"; // Database connection
 import globalError from "./middlewares/errorMiddleware.js"; // Global error handler
 import authRouter from "./routes/authRoute.js"; // Auth routes
@@ -13,6 +14,9 @@ import seedPredefinedCategories from "./scripts/seedpredefinedCategories.js";
 import envVarsSchema from "./config/envValidation.js"; // Joi schema for env variables
 import apiRateLimiter from "./middlewares/rateLimiter.js";
 import { defaultConfig } from "./config/rateLimiterConfig.js";
+import xssMiddleware from "./middlewares/xssMiddleware.js";
+import mongoSanitize from "express-mongo-sanitize";
+// Validate environment variables
 const { error, value: envVars } = envVarsSchema.validate(process.env, {
   allowUnknown: true, // Allow unknown variables
   stripUnknown: true, // Remove unknown variables from the validated object
@@ -20,7 +24,10 @@ const { error, value: envVars } = envVarsSchema.validate(process.env, {
 if (error) {
   throw new Error(`Config validation error: ${error.message}`);
 }
+
+// Assign validated environment variables back to process.env
 Object.assign(process.env, envVars);
+
 // Connect to the database
 connectDB();
 
@@ -34,12 +41,14 @@ app.set("view engine", "ejs");
 app.use(express.json()); // Parse JSON payloads
 app.use(cors()); // Enable CORS
 app.use(cookieParser()); // Parse cookies
+app.use(helmet()); // Set security headers
 app.use(express.static("public")); // Serve static files
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev")); // HTTP request logger in dev mode
 }
 app.use(apiRateLimiter(defaultConfig)); // Rate limiter
-
+app.use(xssMiddleware); // XSS protection
+app.use(mongoSanitize()); // prevent sql injection attacks
 // Seed predefined categories if enabled
 if (process.env.SEED_ON_STARTUP === "true") {
   seedPredefinedCategories()
