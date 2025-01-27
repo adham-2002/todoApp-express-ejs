@@ -10,6 +10,15 @@ import authRouter from "./routes/authRoute.js"; // Auth routes
 import taskRouter from "./routes/taskRoute.js"; // Task routes
 import categoryRouter from "./routes/categoryRoute.js"; // Category routes
 import seedPredefinedCategories from "./scripts/seedpredefinedCategories.js";
+import envVarsSchema from "./config/envValidation.js"; // Joi schema for env variables
+
+const { error, value: envVars } = envVarsSchema.validate(process.env, {
+  allowUnknown: true, // Allow unknown variables
+  stripUnknown: true, // Remove unknown variables from the validated object
+});
+if (error) {
+  throw new Error(`Config validation error: ${error.message}`);
+}
 
 // Connect to the database
 connectDB();

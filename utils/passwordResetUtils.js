@@ -9,7 +9,8 @@ const hashCode = (code) =>
 //3) Save reset code to user
 const saveResetCodeToUser = async (user, hashedCode) => {
   user.passwordResetCode = hashedCode;
-  user.passwordResetExpires = Date.now() + 10 * 60 * 1000;
+  user.passwordResetExpires =
+    Date.now() + parseInt(process.env.PASSWORD_RESET_EXPIRATION); // Default to 10 minutes
   user.passwordResetVerified = false;
   // console.log(user);
   await user.save();
