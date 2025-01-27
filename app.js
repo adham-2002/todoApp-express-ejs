@@ -11,7 +11,8 @@ import taskRouter from "./routes/taskRoute.js"; // Task routes
 import categoryRouter from "./routes/categoryRoute.js"; // Category routes
 import seedPredefinedCategories from "./scripts/seedpredefinedCategories.js";
 import envVarsSchema from "./config/envValidation.js"; // Joi schema for env variables
-
+import apiRateLimiter from "./middlewares/rateLimiter.js";
+import { defaultConfig } from "./config/rateLimiterConfig.js";
 const { error, value: envVars } = envVarsSchema.validate(process.env, {
   allowUnknown: true, // Allow unknown variables
   stripUnknown: true, // Remove unknown variables from the validated object
@@ -19,7 +20,7 @@ const { error, value: envVars } = envVarsSchema.validate(process.env, {
 if (error) {
   throw new Error(`Config validation error: ${error.message}`);
 }
-
+Object.assign(process.env, envVars);
 // Connect to the database
 connectDB();
 
@@ -37,6 +38,7 @@ app.use(express.static("public")); // Serve static files
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev")); // HTTP request logger in dev mode
 }
+app.use(apiRateLimiter(defaultConfig)); // Rate limiter
 
 // Seed predefined categories if enabled
 if (process.env.SEED_ON_STARTUP === "true") {
@@ -59,7 +61,7 @@ app.get("/", (req, res) => {
 app.get("/main", (req, res) => {
   res.render("main"); // Render main.ejs
 });
-
+console.log(process.env.NODE_ENV);
 // Global Error Handler
 app.use(globalError);
 
