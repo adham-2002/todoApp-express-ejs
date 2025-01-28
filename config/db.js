@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import "dotenv/config";
+import logger from "../utils/logger.js";
 
 const connectDB = async () => {
   try {
@@ -12,6 +13,11 @@ const connectDB = async () => {
   } catch (error) {
     // error red with color package
     console.log(`Error: ${error.message}`.red.bold);
+    logger.error("Database connection failed", {
+      stack: error.stack,
+      service: "DatabaseService",
+    });
+
     process.exit(1);
   }
 };

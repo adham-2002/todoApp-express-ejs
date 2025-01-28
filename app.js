@@ -16,12 +16,14 @@ import apiRateLimiter from "./middlewares/rateLimiter.js";
 import { defaultConfig } from "./config/rateLimiterConfig.js";
 import xssMiddleware from "./middlewares/xssMiddleware.js";
 import mongoSanitize from "express-mongo-sanitize";
+import logger from "./utils/logger.js"; // Import the logger
 // Validate environment variables
 const { error, value: envVars } = envVarsSchema.validate(process.env, {
   allowUnknown: true, // Allow unknown variables
   stripUnknown: true, // Remove unknown variables from the validated object
 });
 if (error) {
+  logger.error(`Config validation error: ${error.message}`);
   throw new Error(`Config validation error: ${error.message}`);
 }
 
@@ -77,8 +79,7 @@ app.use(globalError);
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(
-    `Server is running on http://localhost:${PORT} in ${process.env.NODE_ENV} mode`
-      .cyan
+  logger.info(
+    `Server running in ${process.env.NODE_ENV} mode on http://localhost:${PORT}`
   );
 });

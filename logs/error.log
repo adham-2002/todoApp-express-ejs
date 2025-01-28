@@ -1,0 +1,2 @@
+2025-01-28 04:29:35 [ERROR]: Error: Invalid email or password
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:58:17

@@ -1,5 +1,6 @@
 import asyncHandler from "express-async-handler";
 import sendEmail from "../utils/sendEmail.js";
+import logger from "../utils/logger.js";
 import refreshTokenModel from "../models/refreshTokenModel.js";
 import {
   generateResetCode,
@@ -51,6 +52,9 @@ export const signin = asyncHandler(async (req, res, next) => {
   const user = await User.findOne({ email: req.body.email });
 
   if (!user || !(await bcrypt.compare(req.body.password, user.password))) {
+    logger.warn(
+      `Failed login attempt for ${req.body.email} on ${req.ip} from ${req.headers["user-agent"]}`
+    );
     return next(new apiError("Invalid email or password", 401));
   }
 
@@ -82,8 +86,12 @@ export const signin = asyncHandler(async (req, res, next) => {
     sameSite: "none",
     maxAge: parseInt(process.env.JWT_REFRESH_EXPIRES_IN), // Expires in the duration you set
   });
+  // 6) make logs for successful login
+  logger.info(
+    `User logged in successfully ${user.email} ${user.username} on ${req.ip} from ${req.headers["user-agent"]}`
+  );
 
-  // 6) Send the response with the access token and user data
+  // 7) Send the response with the access token and user data
   res.status(200).json({
     status: "success",
     message: "Login successful",

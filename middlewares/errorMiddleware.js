@@ -1,6 +1,8 @@
 import apiError from "../utils/apiError.js";
+import logger from "../utils/logger.js"; // Import the logger
 
 const sendErrorForDev = (err, res) => {
+  logger.error(err);
   res.status(err.statusCode).json({
     status: err.status,
     error: err,
@@ -10,6 +12,7 @@ const sendErrorForDev = (err, res) => {
 };
 
 const sendErrorForProd = (err, res) => {
+  logger.error(err);
   res.status(err.statusCode).json({
     status: err.status,
     message: err.isOperational ? err.message : "Something went wrong!",
@@ -84,7 +87,7 @@ const globalError = (err, req, res, next) => {
 
     // Handle any unexpected errors
     if (!err.isOperational) {
-      console.error("Unexpected Error: ", err);
+      logger.error("Unexpected Error: ", err);
       err = new apiError("Something went wrong!", 500);
     }
 
