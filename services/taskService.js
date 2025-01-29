@@ -33,10 +33,13 @@ export const getTasks = asyncHandler(async (req, res, next) => {
 });
 
 export const createTask = asyncHandler(async (req, res, next) => {
-  const { title, dueDate, categoryId, priority } = req.body;
+  const { title, dueDate, categoryId, priority, description, taskType } =
+    req.body;
 
   const task = await Task.create({
     title,
+    description,
+    taskType,
     dueDate,
     user: req.user._id,
     category: categoryId || null,

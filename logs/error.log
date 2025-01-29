@@ -1,2 +1,81 @@
 2025-01-28 04:29:35 [ERROR]: Error: Invalid email or password
     at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:58:17
+2025-01-28 04:35:14 [ERROR]: Error: Invalid email or password
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:58:17
+2025-01-29 00:35:32 [ERROR]: JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:70:17)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at validatorMiddleware (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/validatorMiddleware.js:8:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at middleware (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-validator\lib\middlewares\check.js:16:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-29 00:35:42 [ERROR]: ValidationError: Task validation failed: group: Cast to ObjectId failed for value "none" (type string) at path "group" because of "BSONError", taskType: `task` is not a valid enum value for path `taskType`.
+    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
+    at applyDefaults (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\document\applyDefaults.js:104:17)
+    at model.Document (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:168:7)
+    at model.Model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:129:12)
+    at new model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:4656:15)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2691:20
+    at Array.map (<anonymous>)
+    at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:38:27
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+2025-01-29 00:36:15 [ERROR]: ValidationError: Task validation failed: group: Cast to ObjectId failed for value "none" (type string) at path "group" because of "BSONError", taskType: `task` is not a valid enum value for path `taskType`.
+    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
+    at applyDefaults (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\document\applyDefaults.js:104:17)
+    at model.Document (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:168:7)
+    at model.Model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:129:12)
+    at new model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:4656:15)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2691:20
+    at Array.map (<anonymous>)
+    at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:38:27
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+2025-01-29 00:36:39 [ERROR]: ValidationError: Task validation failed: group: Cast to ObjectId failed for value "none" (type string) at path "group" because of "BSONError", taskType: `task` is not a valid enum value for path `taskType`.
+    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
+    at applyDefaults (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\document\applyDefaults.js:104:17)
+    at model.Document (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:168:7)
+    at model.Model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:129:12)
+    at new model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:4656:15)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2691:20
+    at Array.map (<anonymous>)
+    at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:38:27
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+2025-01-29 00:37:02 [ERROR]: ValidationError: Task validation failed: group: Cast to ObjectId failed for value "none" (type string) at path "group" because of "BSONError", category: Cast to ObjectId failed for value "none" (type string) at path "category" because of "BSONError"
+    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
+    at applyDefaults (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\document\applyDefaults.js:104:17)
+    at model.Document (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:168:7)
+    at model.Model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:129:12)
+    at new model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:4656:15)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2691:20
+    at Array.map (<anonymous>)
+    at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:39:27
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+2025-01-29 00:37:44 [ERROR]: ValidationError: Task validation failed: group: Cast to ObjectId failed for value "none" (type string) at path "group" because of "BSONError", category: Cast to ObjectId failed for value "none" (type string) at path "category" because of "BSONError"
+    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
+    at applyDefaults (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\document\applyDefaults.js:104:17)
+    at model.Document (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:168:7)
+    at model.Model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:129:12)
+    at new model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:4656:15)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2691:20
+    at Array.map (<anonymous>)
+    at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:39:27
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+2025-01-29 00:37:45 [ERROR]: ValidationError: Task validation failed: group: Cast to ObjectId failed for value "none" (type string) at path "group" because of "BSONError", category: Cast to ObjectId failed for value "none" (type string) at path "category" because of "BSONError"
+    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
+    at applyDefaults (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\document\applyDefaults.js:104:17)
+    at model.Document (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:168:7)
+    at model.Model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:129:12)
+    at new model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:4656:15)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2691:20
+    at Array.map (<anonymous>)
+    at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:39:27
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)

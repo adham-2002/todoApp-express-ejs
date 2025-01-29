@@ -7,6 +7,10 @@ const taskSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    description: {
+      type: String,
+      trim: true,
+    },
     completed: {
       type: Boolean,
       default: false,
@@ -16,11 +20,22 @@ const taskSchema = new mongoose.Schema(
       enum: ["low", "medium", "high"],
       default: "low",
     },
+    taskType: {
+      type: String,
+      enum: ["Personal", "Group"],
+      default: "task",
+    },
+    group: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Group",
+      optional: true,
+      default: null,
+    },
     category: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category",
       optional: true,
-      default: "none",
+      default: null,
     },
     dueDate: {
       type: Date,
