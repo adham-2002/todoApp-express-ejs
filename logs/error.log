@@ -79,3 +79,117 @@
     at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
     at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:39:27
     at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+2025-01-30 03:33:23 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
+2025-01-30 03:33:23 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
+2025-01-30 03:35:30 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
+2025-01-30 03:35:55 [ERROR]: ValidationError: GroupMember validation failed: name: Path `name` is required.
+    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3095:17
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\schemaType.js:1407:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-01-30 03:36:20 [ERROR]: ValidationError: GroupMember validation failed: name: Path `name` is required.
+    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3095:17
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\schemaType.js:1407:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-01-30 16:59:48 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-01-30 17:00:31 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-01-30 17:16:53 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-01-30 17:21:07 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
+2025-01-30 17:23:15 [ERROR]: Error: You are not the admin of this group
+    at isGroupAdmin (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/isGroupAdmin.js:10:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-30 17:29:15 [ERROR]: Error: Invalid email or password
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:58:17
+2025-01-30 17:29:20 [ERROR]: Error: Invalid email or password
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:58:17
+2025-01-30 17:30:51 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-01-30 17:34:40 [ERROR]: Error: You are not the admin of this group
+    at isGroupAdmin (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/isGroupAdmin.js:11:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-30 17:36:07 [ERROR]: Error: Group not found
+    at isGroupAdmin (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/isGroupAdmin.js:9:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-30 17:40:12 [ERROR]: Error: Group not exists or you are not admin
+    at isGroupAdmin (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/isGroupAdmin.js:13:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

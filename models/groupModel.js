@@ -10,9 +10,9 @@ const groupSchema = new mongoose.Schema({
     type: String,
     trim: true,
   },
-  logo: {
-    type: String,
-    default: null,
-  },
+  // logo: {
+  //   type: String,
+  //   default: null,
+  // },
 });
 export default mongoose.model("Group", groupSchema);

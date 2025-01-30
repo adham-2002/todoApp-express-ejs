@@ -17,6 +17,7 @@ import { defaultConfig } from "./config/rateLimiterConfig.js";
 import xssMiddleware from "./middlewares/xssMiddleware.js";
 import mongoSanitize from "express-mongo-sanitize";
 import logger from "./utils/logger.js"; // Import the logger
+import groupRouter from "./routes/groupRoute.js";
 // Validate environment variables
 const { error, value: envVars } = envVarsSchema.validate(process.env, {
   allowUnknown: true, // Allow unknown variables
@@ -64,7 +65,7 @@ if (process.env.SEED_ON_STARTUP === "true") {
 app.use("/api/v1/auth", authRouter); // Authentication routes
 app.use("/api/v1/tasks", taskRouter); // Task management routes
 app.use("/api/v1/categories", categoryRouter); // Category management routes
-
+app.use("/api/v1/groups", groupRouter); // Group management routes
 // Views
 app.get("/", (req, res) => {
   res.render("index"); // Render index.ejs
