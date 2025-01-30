@@ -2,6 +2,7 @@ import asyncHandler from "express-async-handler";
 import Group from "../models/groupModel.js";
 import apiError from "../utils/apiError.js";
 import GroupMember from "../models/groupMembersModel.js";
+import ApiFeatures from "../utils/apiFeature.js";
 //! @desc get Groups created by the logged in user
 // @Route POST /api/v1/groups
 // @access Private admin
@@ -18,7 +19,7 @@ export const getGroups = asyncHandler(async (req, res, next) => {
 });
 export const getGroup = asyncHandler(async (req, res, next) => {
   // 1) find all the groups created by the logged in user
-  const group = await Group.findById(req.params.id);
+  const group = await Group.findById(req.params.groupId);
   res.status(200).json({
     status: "success",
     message: "Group fetched successfully",
@@ -37,7 +38,6 @@ export const createGroup = asyncHandler(async (req, res, next) => {
   });
   //2) Create a admin group member with the user id and group id and role as admin
   const groupMember = await GroupMember.create({
-    name: req.user.username,
     user: req.user._id,
     group: group._id,
     role: "admin",
@@ -54,7 +54,7 @@ export const createGroup = asyncHandler(async (req, res, next) => {
 export const updateGroup = asyncHandler(async (req, res, next) => {
   const { name, description } = req.body;
   // 1) find the group by id
-  const group = await Group.findById(req.params.id);
+  const group = await Group.findById(req.params.groupId);
   if (!group) {
     return next(new apiError("Group not found", 404));
   }
@@ -75,16 +75,16 @@ export const updateGroup = asyncHandler(async (req, res, next) => {
 // @access private admin of the group only
 export const deleteGroup = asyncHandler(async (req, res, next) => {
   // 1) find the group by id
-  const group = await Group.findById(req.params.id);
+  const group = await Group.findById(req.params.groupId);
   if (!group) {
     return next(new apiError("Group not found", 404));
   }
   // 2) check if the user is the admin of the group handled by middleware
 
   // 3) delete the group
-  await Group.findByIdAndDelete(req.params.id);
+  await Group.findByIdAndDelete(req.params.groupId);
   // 4) delete all the group members of the group
-  await GroupMember.deleteMany({ group: req.params.id });
+  await GroupMember.deleteMany({ group: req.params.groupId });
   res.status(200).json({
     status: "success",
     message: "Group deleted successfully",
