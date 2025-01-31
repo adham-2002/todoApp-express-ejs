@@ -10,7 +10,10 @@ const checkGroupRole = (roles) => {
     });
     if (!groupMember || !roles.includes(groupMember.role)) {
       return next(
-        new apiError("You are not allowed to access this route", 403)
+        new apiError(
+          "Group not exits or you are not a member of the group",
+          403
+        )
       );
     }
     next();

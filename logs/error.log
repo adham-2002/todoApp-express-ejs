@@ -1,161 +1,113 @@
-2025-01-28 04:29:35 [ERROR]: Error: Invalid email or password
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:58:17
-2025-01-28 04:35:14 [ERROR]: Error: Invalid email or password
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:58:17
-2025-01-29 00:35:32 [ERROR]: JsonWebTokenError: jwt malformed
-    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:70:17)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
-    at validatorMiddleware (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/validatorMiddleware.js:8:3)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
-    at middleware (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-validator\lib\middlewares\check.js:16:13)
+2025-01-31 19:40:26 [ERROR]: Error: You are not allowed to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-29 00:35:42 [ERROR]: ValidationError: Task validation failed: group: Cast to ObjectId failed for value "none" (type string) at path "group" because of "BSONError", taskType: `task` is not a valid enum value for path `taskType`.
-    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
-    at applyDefaults (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\document\applyDefaults.js:104:17)
-    at model.Document (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:168:7)
-    at model.Model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:129:12)
-    at new model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:4656:15)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2691:20
-    at Array.map (<anonymous>)
-    at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:38:27
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-2025-01-29 00:36:15 [ERROR]: ValidationError: Task validation failed: group: Cast to ObjectId failed for value "none" (type string) at path "group" because of "BSONError", taskType: `task` is not a valid enum value for path `taskType`.
-    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
-    at applyDefaults (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\document\applyDefaults.js:104:17)
-    at model.Document (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:168:7)
-    at model.Model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:129:12)
-    at new model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:4656:15)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2691:20
-    at Array.map (<anonymous>)
-    at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:38:27
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-2025-01-29 00:36:39 [ERROR]: ValidationError: Task validation failed: group: Cast to ObjectId failed for value "none" (type string) at path "group" because of "BSONError", taskType: `task` is not a valid enum value for path `taskType`.
-    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
-    at applyDefaults (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\document\applyDefaults.js:104:17)
-    at model.Document (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:168:7)
-    at model.Model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:129:12)
-    at new model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:4656:15)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2691:20
-    at Array.map (<anonymous>)
-    at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:38:27
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-2025-01-29 00:37:02 [ERROR]: ValidationError: Task validation failed: group: Cast to ObjectId failed for value "none" (type string) at path "group" because of "BSONError", category: Cast to ObjectId failed for value "none" (type string) at path "category" because of "BSONError"
-    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
-    at applyDefaults (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\document\applyDefaults.js:104:17)
-    at model.Document (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:168:7)
-    at model.Model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:129:12)
-    at new model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:4656:15)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2691:20
-    at Array.map (<anonymous>)
-    at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:39:27
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-2025-01-29 00:37:44 [ERROR]: ValidationError: Task validation failed: group: Cast to ObjectId failed for value "none" (type string) at path "group" because of "BSONError", category: Cast to ObjectId failed for value "none" (type string) at path "category" because of "BSONError"
-    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
-    at applyDefaults (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\document\applyDefaults.js:104:17)
-    at model.Document (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:168:7)
-    at model.Model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:129:12)
-    at new model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:4656:15)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2691:20
-    at Array.map (<anonymous>)
-    at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:39:27
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-2025-01-29 00:37:45 [ERROR]: ValidationError: Task validation failed: group: Cast to ObjectId failed for value "none" (type string) at path "group" because of "BSONError", category: Cast to ObjectId failed for value "none" (type string) at path "category" because of "BSONError"
-    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
-    at applyDefaults (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\document\applyDefaults.js:104:17)
-    at model.Document (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:168:7)
-    at model.Model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:129:12)
-    at new model (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:4656:15)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2691:20
-    at Array.map (<anonymous>)
-    at Function.create (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\model.js:2679:34)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskService.js:39:27
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-2025-01-30 03:33:23 [ERROR]: Error: Not authorized to access this route
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
-    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
-2025-01-30 03:33:23 [ERROR]: Error: Not authorized to access this route
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
-    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
-2025-01-30 03:35:30 [ERROR]: Error: Not authorized to access this route
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
-    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
-2025-01-30 03:35:55 [ERROR]: ValidationError: GroupMember validation failed: name: Path `name` is required.
-    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3095:17
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\schemaType.js:1407:9
-    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
-2025-01-30 03:36:20 [ERROR]: ValidationError: GroupMember validation failed: name: Path `name` is required.
-    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3095:17
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\schemaType.js:1407:9
-    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
-2025-01-30 16:59:48 [ERROR]: TokenExpiredError: jwt expired
+2025-01-31 19:41:27 [ERROR]: Error: You are not allowed to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:41:29 [ERROR]: Error: You are not allowed to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:41:43 [ERROR]: Error: You are not allowed to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:44:19 [ERROR]: Error: You are not allowed to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:45:46 [ERROR]: Error: You are not allowed to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:45:52 [ERROR]: Error: You are not allowed to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:47:50 [ERROR]: Error: You are not allowed to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:47:53 [ERROR]: Error: You are not allowed to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:48:08 [ERROR]: Error: You are not allowed to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:49:01 [ERROR]: Error: Too many requests, please try again later.
+    at Object.handler (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/rateLimiter.js:15:19)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/node_modules/express-rate-limit/dist/index.mjs:791:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///A:/MyGitHub2024/todoApp-express-ejs/node_modules/express-rate-limit/dist/index.mjs:676:5
+2025-01-31 19:49:54 [ERROR]: Error: You are not allowed to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:50:51 [ERROR]: Error: Group not exits or user not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:51:26 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:51:31 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:52:02 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:52:04 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:52:06 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:52:08 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:53:56 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:14:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:54:41 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:14:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 19:55:14 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:15:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 20:23:24 [ERROR]: TokenExpiredError: jwt expired
     at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
     at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
     at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
     at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
     at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
     at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
-2025-01-30 17:00:31 [ERROR]: TokenExpiredError: jwt expired
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
-    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
-    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
-2025-01-30 17:16:53 [ERROR]: TokenExpiredError: jwt expired
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
-    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
-    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
-2025-01-30 17:21:07 [ERROR]: Error: Not authorized to access this route
+    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
+2025-01-31 20:23:38 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:15:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 20:24:38 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:15:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 20:27:26 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:14:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 20:28:08 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:15:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 20:28:49 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:16:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 20:30:37 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:16:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 20:34:27 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:16:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 20:34:33 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:16:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 20:34:43 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:16:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 20:35:03 [ERROR]: Error: Group member not found
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:35:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:24:15 [ERROR]: Error: Not authorized to access this route
     at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
     at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
     at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
@@ -166,181 +118,397 @@
     at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
     at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
     at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
-2025-01-30 17:23:15 [ERROR]: Error: You are not the admin of this group
-    at isGroupAdmin (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/isGroupAdmin.js:10:17)
+2025-01-31 22:24:23 [ERROR]: Error: User is already a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:52:17
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-30 17:29:15 [ERROR]: Error: Invalid email or password
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:58:17
-2025-01-30 17:29:20 [ERROR]: Error: Invalid email or password
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:58:17
-2025-01-30 17:30:51 [ERROR]: Error: Not authorized to access this route
+2025-01-31 22:24:29 [ERROR]: Error: Not authorized to access this route
     at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
-    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
-2025-01-30 17:34:40 [ERROR]: Error: You are not the admin of this group
-    at isGroupAdmin (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/isGroupAdmin.js:11:17)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-30 17:36:07 [ERROR]: Error: Group not found
-    at isGroupAdmin (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/isGroupAdmin.js:9:17)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-30 17:40:12 [ERROR]: Error: Group not exists or you are not admin
-    at isGroupAdmin (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/isGroupAdmin.js:13:17)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-30 17:45:25 [ERROR]: Error: Group not exists or you are not admin
-    at isGroupAdmin (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/isGroupAdmin.js:13:17)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-30 19:09:45 [ERROR]: Error: You are not admin of this group
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/isGroupAdmin.js:13:19
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-30 19:15:19 [ERROR]: Error: You are not admin of this group
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:19
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-30 23:58:55 [ERROR]: TokenExpiredError: jwt expired
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
-    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
-    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
     at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
     at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
     at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
     at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
     at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
     at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
-2025-01-30 23:59:55 [ERROR]: Error: Not authorized to access this route
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
+2025-01-31 22:24:43 [ERROR]: Error: Not authorized to access this route
     at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
-    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
-    at Function.handle (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:175:3)
-    at router (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:47:12)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-2025-01-31 00:00:05 [ERROR]: Error: You are not member of this group
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:19
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-31 00:01:08 [ERROR]: Error: You are not member of this group
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:19
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-31 00:03:40 [ERROR]: Error: You are not member of this group
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:19
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-31 00:18:03 [ERROR]: TokenExpiredError: jwt expired
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
-    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
-    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
-    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
-2025-01-31 00:33:28 [ERROR]: SyntaxError: Expected ':' after property name in JSON at position 11
-    at JSON.parse (<anonymous>)
-    at parse (A:\MyGitHub2024\todoApp-express-ejs\node_modules\body-parser\lib\types\json.js:92:19)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\body-parser\lib\read.js:128:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
-    at invokeCallback (A:\MyGitHub2024\todoApp-express-ejs\node_modules\raw-body\index.js:238:16)
-    at done (A:\MyGitHub2024\todoApp-express-ejs\node_modules\raw-body\index.js:227:7)
-    at IncomingMessage.onEnd (A:\MyGitHub2024\todoApp-express-ejs\node_modules\raw-body\index.js:287:7)
-    at IncomingMessage.emit (node:events:519:28)
-    at endReadableNT (node:internal/streams/readable:1696:12)
-    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
-2025-01-31 00:34:33 [ERROR]: Error: read ECONNRESET
-    at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)
-2025-01-31 00:34:40 [ERROR]: Error: read ECONNRESET
-    at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)
-2025-01-31 00:45:45 [ERROR]: TokenExpiredError: jwt expired
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
-    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
-    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
-    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
-2025-01-31 00:47:35 [ERROR]: MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
-    at Timeout.<anonymous> (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185:23)
-    at listOnTimeout (node:internal/timers:581:17)
-    at process.processTimers (node:internal/timers:519:7)
-2025-01-31 01:00:20 [ERROR]: MongoServerError: Cannot do exclusion on field id in inclusion projection
-    at Connection.sendCommand (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongodb\lib\cmap\connection.js:296:27)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async Connection.command (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongodb\lib\cmap\connection.js:323:26)
-    at async Server.command (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongodb\lib\sdam\server.js:170:29)
-    at async FindOperation.execute (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongodb\lib\operations\find.js:36:16)
-    at async tryOperation (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongodb\lib\operations\execute_operation.js:203:20)
-    at async executeOperation (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongodb\lib\operations\execute_operation.js:73:16)
-    at async FindCursor._initialize (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongodb\lib\cursor\find_cursor.js:60:26)
-    at async FindCursor.cursorInit (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongodb\lib\cursor\abstract_cursor.js:607:27)
-    at async FindCursor.fetchBatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongodb\lib\cursor\abstract_cursor.js:641:13)
-2025-01-31 01:09:37 [ERROR]: TokenExpiredError: jwt expired
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
-    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
-    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
-    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
-2025-01-31 01:09:42 [ERROR]: Error: User is already a member of the group
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:48:17
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-31 01:22:33 [ERROR]: Error: Not authorized to access this route
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
-    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
-    at Function.handle (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:175:3)
-    at router (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:47:12)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-2025-01-31 01:22:44 [ERROR]: Error: Group member not found
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:33:17
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-31 01:23:18 [ERROR]: Error: Group member not found
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:33:17
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-31 01:23:56 [ERROR]: Error: Group member not found
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:33:17
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-31 01:23:59 [ERROR]: Error: Group member not found
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:33:17
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-31 01:25:30 [ERROR]: TokenExpiredError: jwt expired
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
-    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
-    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
-    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
-    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
-    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
-    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
-    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
-    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
-2025-01-31 01:27:22 [ERROR]: Error: Invalid select: select only takes 1 argument
-    at model.Query.select (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\query.js:1071:11)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:32:6
     at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
     at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
     at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:16:5
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
+2025-01-31 22:25:19 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
+2025-01-31 22:25:30 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:106:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-2025-01-31 01:34:37 [ERROR]: Error: Group member not found
-    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:81:17
+2025-01-31 22:26:00 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:106:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:27:16 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:27:32 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:28:10 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:28:11 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:28:22 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
+2025-01-31 22:28:32 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:29:21 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:108:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:30:22 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:31:00 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:31:13 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:31:14 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:31:15 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:31:16 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:32:21 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:32:27 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:32:28 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:32:29 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:32:30 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:33:09 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:35:15 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
+2025-01-31 22:35:25 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
+2025-01-31 22:35:26 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
+2025-01-31 22:35:27 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
+2025-01-31 22:35:53 [ERROR]: Error: User is already a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:52:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:36:39 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
+2025-01-31 22:36:47 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:37:16 [ERROR]: Error: Invalid token
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:37:31 [ERROR]: Error: Invalid token please login again
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:107:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:39:31 [ERROR]: Error: Invalid token please login again
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:108:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:40:00 [ERROR]: Error: Invalid token please login again
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:108:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:45:25 [ERROR]: Error: User is already a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:52:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:46:57 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
+2025-01-31 22:47:04 [ERROR]: Error: Invalid token please login again
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:110:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:48:25 [ERROR]: Error: Invalid token please login again
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:110:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:50:14 [ERROR]: ReferenceError: Console is not defined
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:106:3
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:51:17 [ERROR]: ReferenceError: Console is not defined
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:105:3
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:51:23 [ERROR]: ReferenceError: Console is not defined
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:105:3
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:51:27 [ERROR]: ReferenceError: Console is not defined
+    at generateJoinToken (file:///A:/MyGitHub2024/todoApp-express-ejs/utils/jwtUtils.js:10:3)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:92:21
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:19:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:51:40 [ERROR]: ReferenceError: Console is not defined
+    at generateJoinToken (file:///A:/MyGitHub2024/todoApp-express-ejs/utils/jwtUtils.js:10:3)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:92:21
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:19:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:53:32 [ERROR]: Error: Not authorized to access this route
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:190:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:365:14)
+    at param (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:421:3)
+2025-01-31 22:53:40 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-01-31 22:53:54 [ERROR]: Error: Invalid token please login again
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:113:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:56:03 [ERROR]: Error: Invalid token please login again
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:113:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:57:20 [ERROR]: Error: Invalid token please login again
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:113:17
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:57:47 [ERROR]: Error: User is already a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:119:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 22:58:24 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
