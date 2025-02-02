@@ -578,3 +578,161 @@ undefined [INFO]: Server running in development mode on http://localhost:3000
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 2025-01-31 22:59:25 [INFO]: User logged in successfully adham@gmail.com adham on ::1 from PostmanRuntime/7.43.0
 2025-01-31 23:00:12 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-01 03:03:15 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-01 03:03:51 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-01 03:04:10 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-01 03:04:35 [INFO]: User logged in successfully adham54732@gmail.com adham ashraf  on ::1 from PostmanRuntime/7.43.0
+2025-02-01 03:04:44 [ERROR]: Error: User is already a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:53:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-02 01:52:05 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 02:19:31 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 02:30:32 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 02:32:47 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 02:35:48 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 02:37:21 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 02:39:05 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 05:40:55 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 05:41:01 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 16:46:11 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 16:54:59 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at validatorMiddleware (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/validatorMiddleware.js:8:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+2025-02-02 16:56:25 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:02:48 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:06:05 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:07:09 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:07:12 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-02 17:08:48 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:11:51 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at validatorMiddleware (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/validatorMiddleware.js:8:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+2025-02-02 17:11:54 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:18:50 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:18:59 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:16:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-02 17:30:21 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-02 17:32:29 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:33:00 [INFO]: User logged in successfully adham@gmail.com adham on ::1 from PostmanRuntime/7.43.0
+2025-02-02 17:33:04 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:16:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-02 17:35:57 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:36:32 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:36:35 [ERROR]: Error: Group not exits or you are not a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:16:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-02 17:37:02 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:37:05 [ERROR]: Error: Group not exits or you are not a admin of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:16:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-02 17:37:29 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:37:40 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:37:49 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:37:55 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 17:37:59 [ERROR]: Error: Group not exits or you are not a admin,something of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:16:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-02 17:38:08 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 18:15:23 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 18:15:46 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 18:17:51 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at validatorMiddleware (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/validatorMiddleware.js:8:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+2025-02-02 18:18:01 [ERROR]: Error: Group not exits or you are not a admin of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-02 18:18:16 [INFO]: User logged in successfully adham54732@gmail.com adham ashraf  on ::1 from PostmanRuntime/7.43.0
+2025-02-02 18:22:38 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 18:26:04 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 18:34:06 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-02 18:35:34 [ERROR]: Error: Group not exits or you are not a admin of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-02 18:35:52 [INFO]: User logged in successfully adham54732@gmail.com adham ashraf  on ::1 from PostmanRuntime/7.43.0
+2025-02-02 18:35:55 [ERROR]: Error: Group not exits or you are not a admin of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-02 19:40:14 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-02 19:42:22 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 19:43:25 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 19:50:11 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 19:54:57 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 19:56:56 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 19:57:05 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 20:33:19 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 21:00:01 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 22:47:53 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 22:48:57 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-02 23:15:53 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 01:08:42 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 01:16:04 [INFO]: Server running in development mode on http://localhost:3000

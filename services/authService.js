@@ -180,6 +180,7 @@ export const refreshToken = asyncHandler(async (req, res, next) => {
 export const protect = asyncHandler(async (req, res, next) => {
   // 1) check if token is exists if exists hold it in a variable
   let token;
+  console.log(req.body.taskType);
   if (
     req.headers.authorization &&
     req.headers.authorization.startsWith("Bearer")

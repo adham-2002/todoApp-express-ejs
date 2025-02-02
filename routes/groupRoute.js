@@ -10,6 +10,7 @@ import { generateJoinLink, joinGroup } from "../services/groupMemberService.js";
 import groupMemberRouter from "./groupMemberRoute.js";
 import checkGroupRole from "../middlewares/groupRoleMiddleware.js";
 import { protect } from "../services/authService.js";
+import taskRouter from "./taskRoute.js";
 
 const router = express.Router();
 
@@ -31,5 +32,5 @@ router.route("/join/:token").get(protect, joinGroup);
 
 // Nested routes for group members
 router.use("/:groupId/members", groupMemberRouter);
-
+router.use("/:groupId/tasks", taskRouter);
 export default router;
