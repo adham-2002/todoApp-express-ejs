@@ -1,19 +1,12 @@
 import GroupMember from "../models/groupMembersModel.js";
-import Group from "../models/groupModel.js";
 import apiError from "../utils/apiError.js";
-import logger from "../utils/logger.js";
-const checkGroupRole = (roles) => {
+const authorizeGroupAdmin = (roles) => {
   return async (req, res, next) => {
-    if (
-      req.body.taskType === "personal" &&
-      !req.params.groupId &&
-      !req.body.group
-    ) {
-      return next();
-    }
+    const groupId = req.params.groupId || req.body.groupId;
+    const userId = req.user._id;
     const groupMember = await GroupMember.findOne({
-      user: req.user._id,
-      group: req.params.groupId || req.body.group,
+      user: userId,
+      group: groupId,
     });
     if (!groupMember || !roles.includes(groupMember.role)) {
       return next(
@@ -23,9 +16,9 @@ const checkGroupRole = (roles) => {
         )
       );
     }
-    req.member = groupMember;
+    // req.member = groupMember;
     next();
   };
 };
 
-export default checkGroupRole;
+export default authorizeGroupAdmin;

@@ -7,18 +7,18 @@ import {
   deleteGroupMember,
 } from "../services/groupMemberService.js";
 import { protect } from "../services/authService.js";
-import checkGroupRole from "../middlewares/groupRoleMiddleware.js";
+import authorizeGroupAdmin from "../middlewares/groupRoleMiddleware.js";
 const router = express.Router({ mergeParams: true });
 
 router.use(protect);
 router
   .route("/")
-  .get(checkGroupRole(["admin", "member"]), getGroupMembers)
-  .post(checkGroupRole(["admin"]), addGroupMember);
+  .get(authorizeGroupAdmin(["admin", "member"]), getGroupMembers)
+  .post(authorizeGroupAdmin(["admin"]), addGroupMember);
 router
   .route("/:memberId")
-  .get(checkGroupRole(["admin", "member"]), getGroupMember)
-  .put(checkGroupRole(["admin"]), updateGroupMember)
-  .delete(checkGroupRole(["admin"]), deleteGroupMember);
+  .get(authorizeGroupAdmin(["admin", "member"]), getGroupMember)
+  .put(authorizeGroupAdmin(["admin"]), updateGroupMember)
+  .delete(authorizeGroupAdmin(["admin"]), deleteGroupMember);
 
 export default router;

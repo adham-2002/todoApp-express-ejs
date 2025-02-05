@@ -35,6 +35,7 @@ export const createGroup = asyncHandler(async (req, res, next) => {
   const group = await Group.create({
     name,
     description,
+    createdBy: req.user._id,
   });
   //2) Create a admin group member with the user id and group id and role as admin
   const groupMember = await GroupMember.create({

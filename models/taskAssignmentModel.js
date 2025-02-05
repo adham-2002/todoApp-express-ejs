@@ -16,5 +16,14 @@ const taskAssignmentSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
+  group: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Group",
+    required: true,
+  },
+  isActive: {
+    type: Boolean,
+    default: true,
+  },
 });
 export default mongoose.model("TaskAssignment", taskAssignmentSchema);

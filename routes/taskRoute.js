@@ -2,41 +2,23 @@ import express from "express";
 import {
   createTask,
   getTasks,
+  getTask,
   updateTask,
   deleteTask,
-  createFilterObject,
-} from "../services/taskService.js";
+} from "../services/tasksService.js";
 import { protect } from "../services/authService.js";
-import checkGroupRole from "../middlewares/groupRoleMiddleware.js";
 import {
   createTaskValidator,
   updateTaskValidator,
   deleteTaskValidator,
 } from "../utils/validators/taskValidator.js";
-const router = express.Router({ mergeParams: true });
-
+const router = express.Router();
+router.use(protect);
 router
-  .post(
-    "/",
-    createTaskValidator,
-    protect,
-    checkGroupRole(["admin"]),
-    createTask
-  )
-  .get("/", protect, checkGroupRole(["admin", "member"]), getTasks)
-  .put(
-    "/:id",
-    updateTaskValidator,
-    protect,
-    checkGroupRole(["admin", "member"]),
-    updateTask
-  )
-  .delete(
-    "/:id",
-    deleteTaskValidator,
-    protect,
-    checkGroupRole(["admin"]),
-    deleteTask
-  );
+  .post("/", createTaskValidator, protect, createTask)
+  .get("/", getTasks)
+  .get("/:id", getTask)
+  .put("/:id", updateTaskValidator, protect, updateTask)
+  .delete("/:id", deleteTaskValidator, protect, deleteTask);
 
 export default router;

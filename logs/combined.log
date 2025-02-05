@@ -736,3 +736,395 @@ undefined [INFO]: Server running in development mode on http://localhost:3000
 2025-02-02 23:15:53 [INFO]: Server running in development mode on http://localhost:3000
 2025-02-03 01:08:42 [INFO]: Server running in development mode on http://localhost:3000
 2025-02-03 01:16:04 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 01:16:19 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 02:13:43 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-03 02:13:50 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:13:57 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:14:07 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:14:26 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:14:27 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:14:29 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:14:30 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:14:48 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:16:05 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:16:09 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:16:15 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:16:32 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:17:29 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:17:30 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:18:26 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:18:27 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:20:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:18:52 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 02:18:56 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:21:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:19:26 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 02:19:30 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:20:13 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:20:57 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:21:03 [INFO]: User logged in successfully adham54732@gmail.com adham ashraf  on ::1 from PostmanRuntime/7.43.0
+2025-02-03 02:21:07 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:21:28 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 02:21:31 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:21:44 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 02:21:49 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:22:36 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:22:45 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:25:27 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:25:34 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:25:50 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:25:55 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:27:05 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 02:27:08 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:27:12 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:28:16 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:24:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-03 02:28:19 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 02:28:49 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 02:29:55 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 03:55:39 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 19:45:52 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 19:47:10 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 20:10:03 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 20:13:39 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 20:15:22 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 20:24:27 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 20:28:25 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 20:28:45 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 20:29:13 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 20:34:12 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 20:37:59 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 20:42:17 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 20:43:12 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 20:43:15 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-03 23:29:38 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 03:32:55 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 03:32:58 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 03:52:50 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 04:07:44 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 04:15:19 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 04:16:02 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 05:31:10 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 05:32:46 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 05:32:55 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 05:32:58 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:16:28 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:24:08 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:24:53 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:25:28 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:32:54 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:35:39 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:37:11 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:38:00 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:39:32 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:40:37 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:43:24 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:43:33 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:43:56 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 06:49:13 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-04 06:52:42 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 07:04:32 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 07:04:35 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
+2025-02-04 07:12:20 [ERROR]: Error: Task not found
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/personalTasksService.js:84:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-04 07:25:40 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 07:26:55 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 09:07:30 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 09:07:38 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 16:57:59 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 16:58:36 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 16:59:20 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 17:08:51 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 17:16:51 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 17:26:20 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 17:26:40 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 17:26:55 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 17:33:33 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 17:33:56 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 17:44:36 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 17:45:11 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 17:59:21 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 17:59:57 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 18:00:28 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 20:01:29 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 20:02:16 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 20:53:53 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 20:54:01 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 20:54:18 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 20:54:43 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 21:13:56 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
+2025-02-04 21:16:14 [ERROR]: ValidationError: Group validation failed: createdBy: Path `createdBy` is required.
+    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3095:17
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\schemaType.js:1407:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-02-04 21:16:50 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 21:21:53 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 21:22:15 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 21:27:01 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 21:28:44 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 21:29:31 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 21:29:45 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 21:30:00 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 21:49:48 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 21:54:15 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 21:55:08 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
+2025-02-04 21:55:17 [INFO]: User logged in successfully adham54732@gmail.com adham ashraf  on ::1 from PostmanRuntime/7.43.0
+2025-02-04 21:57:23 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 21:58:15 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:14:50 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:16:23 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:18:18 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:20:41 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:21:25 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:24:48 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:30:49 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:31:46 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:32:57 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:33:10 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:34:01 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:36:34 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:37:55 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:38:06 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:38:32 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:44:31 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:54:41 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-04 23:54:51 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:145:7)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+2025-02-04 23:56:33 [ERROR]: ReferenceError: GroupMember is not defined
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/personalTasksService.js:81:22
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:205:3
+2025-02-04 23:57:15 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 00:00:57 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 00:01:27 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 00:01:30 [ERROR]: TypeError: Task.create(...).select is not a function
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/personalTasksService.js:64:8
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-05 00:01:49 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 00:06:16 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 00:07:59 [ERROR]: Error: Invalid task type. Allowed values: Personal/Group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/personalTasksService.js:73:7
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:205:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-05 00:08:08 [ERROR]: Error: Personal tasks cannot have a group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/personalTasksService.js:15:19
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:205:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-05 00:10:12 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
+2025-02-05 00:26:53 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 00:36:29 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 00:49:51 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 00:51:25 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 00:52:03 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
+2025-02-05 00:52:13 [ERROR]: ValidationError: Validation failed: priority: `Low` is not a valid enum value for path `priority`.
+    at _done (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\updateValidators.js:228:19)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\updateValidators.js:204:11
+    at schemaPath.doValidate.updateValidator (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\helpers\updateValidators.js:162:13)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\schemaType.js:1399:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-02-05 00:54:42 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 00:54:45 [ERROR]: Error: Task not found
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/personalTasksService.js:180:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-05 02:02:07 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 02:02:33 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
+2025-02-05 02:02:46 [ERROR]: Error: Task not found
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/personalTasksService.js:145:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-05 02:03:10 [ERROR]: Error: Task not found
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/personalTasksService.js:145:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-05 02:08:17 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 02:14:45 [ERROR]: Error: Task not found
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/tasksService.js:117:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-05 02:15:13 [ERROR]: Error: Task not found
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/tasksService.js:117:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-05 02:16:04 [ERROR]: Error: Task not found
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/tasksService.js:117:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-05 02:17:33 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 02:18:10 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:328:13)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:346:12)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:280:10)
+2025-02-05 02:18:16 [ERROR]: Error: Task not found
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/tasksService.js:117:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-05 02:21:30 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 02:21:50 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 02:22:15 [INFO]: Server running in development mode on http://localhost:3000
+2025-02-05 02:22:25 [INFO]: Server running in development mode on http://localhost:3000
