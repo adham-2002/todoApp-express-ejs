@@ -19,6 +19,7 @@ import mongoSanitize from "express-mongo-sanitize";
 import logger from "./utils/logger.js"; // Import the logger
 import groupRouter from "./routes/groupRoute.js";
 import groupMemberRouter from "./routes/groupMemberRoute.js";
+import taskAssignRoute from "./routes/taskAssignRoute.js";
 // Validate environment variables
 const { error, value: envVars } = envVarsSchema.validate(process.env, {
   allowUnknown: true, // Allow unknown variables
@@ -68,6 +69,7 @@ app.use("/api/v1/tasks", taskRouter); // Task management routes
 app.use("/api/v1/categories", categoryRouter); // Category management routes
 app.use("/api/v1/groups", groupRouter); // Group management routes
 app.use("/api/v1/members", groupMemberRouter); // Group member management routes
+app.use("/api/v1/assignments", taskAssignRoute); // Task assignment routes
 
 // Views
 app.get("/", (req, res) => {
@@ -76,7 +78,7 @@ app.get("/", (req, res) => {
 app.get("/main", (req, res) => {
   res.render("main"); // Render main.ejs
 });
-console.log(process.env.NODE_ENV);
+// console.log(process.env.NODE_ENV);
 // Global Error Handler
 app.use(globalError);
 

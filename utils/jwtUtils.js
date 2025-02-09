@@ -7,7 +7,7 @@ export const generateAccessToken = (payload) => {
   });
 };
 export const generateJoinToken = (groupId) => {
-  console.log(process.env.JWT_SECRET_KEY);
+  // console.log(process.env.JWT_SECRET_KEY);
   return jwt.sign({ groupId }, process.env.JWT_SECRET_KEY, {
     expiresIn: "1h", // Token expires in 1 hour
   });

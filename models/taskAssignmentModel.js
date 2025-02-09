@@ -21,9 +21,5 @@ const taskAssignmentSchema = new mongoose.Schema({
     ref: "Group",
     required: true,
   },
-  isActive: {
-    type: Boolean,
-    default: true,
-  },
 });
 export default mongoose.model("TaskAssignment", taskAssignmentSchema);

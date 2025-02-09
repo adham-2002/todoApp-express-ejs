@@ -3,6 +3,7 @@ import Task from "../models/taskModel.js";
 import apiError from "../utils/apiError.js";
 import ApiFeatures from "../utils/apiFeature.js";
 import GroupMember from "../models/groupMembersModel.js";
+import TaskAssignment from "../models/taskAssignmentModel.js";
 //! Create Personal Task
 // @Route POST /api/v1/tasks
 // @Access Private
@@ -168,6 +169,47 @@ export const updateTask = asyncHandler(async (req, res, next) => {
   res.status(200).json({
     status: "success",
     message: "Task updated successfully",
+    data: updatedTask,
+  });
+});
+// route to update task only as completed for the member who task assigned to them
+// @Route PUT /api/v1/tasks/:id/complete
+// @Access Private member only can update the task
+export const completeTask = asyncHandler(async (req, res, next) => {
+  const { completed } = req.body;
+
+  // Check if the task is assigned to the user
+  const isAssigned = await TaskAssignment.exists({
+    assignedTo: req.user._id,
+    task: req.params.id,
+  });
+
+  if (!isAssigned) {
+    return next(new apiError("You are not assigned to this task", 403));
+  }
+
+  // Find and update the task
+  const updatedTask = await Task.findByIdAndUpdate(
+    req.params.id,
+    {
+      $set: {
+        completed: completed || false,
+        completedAt: completed ? Date.now() : null, // Handle completedAt conditionally
+      },
+    },
+    {
+      new: true,
+      runValidators: true,
+    }
+  );
+
+  if (!updatedTask) {
+    return next(new apiError("Task not found", 404));
+  }
+
+  res.status(200).json({
+    status: "success",
+    message: "Task completed status updated successfully",
     data: updatedTask,
   });
 });

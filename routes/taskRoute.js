@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  completeTask,
   createTask,
   getTasks,
   getTask,
@@ -18,6 +19,7 @@ router
   .post("/", createTaskValidator, protect, createTask)
   .get("/", getTasks)
   .get("/:id", getTask)
+  .put("/:id/complete", protect, completeTask)
   .put("/:id", updateTaskValidator, protect, updateTask)
   .delete("/:id", deleteTaskValidator, protect, deleteTask);
 

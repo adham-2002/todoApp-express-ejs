@@ -891,3 +891,216 @@
 2025-02-05 02:18:16 [ERROR]: Error: Task not found
     at file:///A:/MyGitHub2024/todoApp-express-ejs/services/tasksService.js:117:26
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 08:16:13 [ERROR]: Error: Unauthorized access
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/tasksService.js:122:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 08:20:27 [ERROR]: Error: Group not exits or you are not a admin of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 08:21:59 [ERROR]: Error: User is already a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:53:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 08:22:21 [ERROR]: Error: User is already a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:53:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 08:22:54 [ERROR]: Error: User is already a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:53:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 08:23:11 [ERROR]: Error: User is already a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:53:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 08:23:29 [ERROR]: Error: User is already a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:53:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 08:23:30 [ERROR]: Error: User is already a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:53:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 19:16:40 [ERROR]: Error: User is already a member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/groupMemberService.js:53:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 19:20:11 [ERROR]: Error: Group not exits or you are not a admin,member of the group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/groupRoleMiddleware.js:13:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 19:33:59 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-07 19:34:27 [ERROR]: Error: Task already assigned to the user
+    at createTaskAssignment (file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:47:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 19:34:35 [ERROR]: Error: Can't Find the task Make sure you assigned i
+    at createTaskAssignment (file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:38:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 19:36:48 [ERROR]: Error: Task already assigned to the user
+    at createTaskAssignment (file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:47:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-07 20:05:23 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-07 20:52:10 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-07 21:29:24 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:194:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-07 21:51:48 [ERROR]: Error: You are not an admin of this group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:18:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-08 04:25:17 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-08 04:25:22 [ERROR]: Error: You are not an admin of this group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:18:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-08 07:11:34 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-08 07:14:26 [ERROR]: TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\response.js:1160:12)
+    at ServerResponse.json (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\response.js:271:14)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:96:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-08 07:15:54 [ERROR]: TypeError: Cannot read properties of undefined (reading 'length')
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:94:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-08 07:17:00 [ERROR]: TypeError: Cannot read properties of undefined (reading 'length')
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:94:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-08 07:17:01 [ERROR]: TypeError: Cannot read properties of undefined (reading 'length')
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:94:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-08 07:17:37 [ERROR]: TypeError: Cannot read properties of undefined (reading 'length')
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:94:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-08 07:18:09 [ERROR]: TypeError: Cannot read properties of undefined (reading 'length')
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:94:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-08 07:24:55 [ERROR]: Error: Task already assigned to the user
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:56:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-08 07:35:17 [ERROR]: Error: Task already assigned to the user
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:56:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-08 07:35:56 [ERROR]: ValidationError: Task validation failed: priority: `Low` is not a valid enum value for path `priority`.
+    at Document.invalidate (A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3334:32)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\document.js:3095:17
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\mongoose\lib\schemaType.js:1407:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+2025-02-08 07:42:35 [ERROR]: Error: Too many requests, please try again later.
+    at Object.handler (file:///A:/MyGitHub2024/todoApp-express-ejs/middlewares/rateLimiter.js:15:19)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/node_modules/express-rate-limit/dist/index.mjs:791:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///A:/MyGitHub2024/todoApp-express-ejs/node_modules/express-rate-limit/dist/index.mjs:676:5
+2025-02-08 07:45:57 [ERROR]: TypeError: (intermediate value).filter(...).sort(...).limitFields(...).search(...).paginate(...).populate is not a function
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:91:6
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-08 07:53:48 [ERROR]: Error: No tasks assigned to you
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:97:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-08 08:03:15 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-08 08:03:16 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-08 08:18:42 [ERROR]: TokenExpiredError: jwt expired
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\jsonwebtoken\verify.js:101:10)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:193:23
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\index.js:284:15
+2025-02-08 08:20:01 [ERROR]: Error: You are not a member of this group
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/taskAssignService.js:116:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-09 04:44:57 [ERROR]: ReferenceError: TaskAssignment is not defined
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/tasksService.js:180:22
+    at asyncUtilWrap (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\layer.js:95:5)
+    at next (A:\MyGitHub2024\todoApp-express-ejs\node_modules\express\lib\router\route.js:149:13)
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/authService.js:204:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-09 04:45:52 [ERROR]: Error: You are not assigned to this task
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/tasksService.js:187:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-09 04:52:07 [ERROR]: Error: You are not assigned to this task
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/tasksService.js:187:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-09 04:53:15 [ERROR]: Error: Task not found
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/tasksService.js:190:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-09 04:53:32 [ERROR]: Error: You are not assigned to this task
+    at file:///A:/MyGitHub2024/todoApp-express-ejs/services/tasksService.js:187:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
